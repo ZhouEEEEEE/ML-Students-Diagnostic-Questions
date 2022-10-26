@@ -86,9 +86,7 @@ def main():
     test_acc = knn_impute_by_item(sparse_matrix, test_data, k_max)
     print("The accuracy of test_set on questions is {}".format(test_acc))
 
-    #####################################################################
-    #                       END OF YOUR CODE                            #
-    #####################################################################
+
 
 if __name__ == "__main__":
     main()

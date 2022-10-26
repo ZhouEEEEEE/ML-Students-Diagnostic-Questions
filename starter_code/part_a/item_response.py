@@ -20,9 +20,7 @@ def neg_log_likelihood(data, theta, beta):
     :param beta: Vector
     :return: float
     """
-    #####################################################################
-    #                       END OF YOUR CODE                            #
-    #####################################################################
+
     log_lklihood = 0.
     for i in range(len(data["user_id"])):
         theta_i = theta[data["user_id"][i]]
@@ -127,11 +125,7 @@ def main():
     val_data = load_valid_csv("../data")
     test_data = load_public_test_csv("../data")
 
-    #####################################################################
-    # TODO:                                                             #
-    # Tune learning rate and number of iterations. With the implemented #
-    # code, report the validation and test accuracy.                    #
-    #####################################################################
+
     iterations = [200]
     lr = [0.01]
     # iterations_lst = list(range(iterations))
@@ -190,10 +184,6 @@ def main():
     plt.legend()
     plt.show()
 
-    #####################################################################
-    #####################################################################
-    #                       END OF YOUR CODE                            #
-    #####################################################################
 
 
 if __name__ == "__main__":

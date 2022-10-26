@@ -22,9 +22,7 @@ def neg_log_likelihood(data, theta, beta, alpha, c, d):
     :param beta: Vector
     :return: float
     """
-    #####################################################################
-    #                       END OF YOUR CODE                            #
-    #####################################################################
+
     log_lklihood = 0.
     for i in range(len(data["user_id"])):
         theta_i = theta[data["user_id"][i]]

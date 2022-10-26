@@ -65,18 +65,12 @@ class AutoEncoder(nn.Module):
         :param inputs: user vector.
         :return: user vector.
         """
-        #####################################################################
-        # TODO:                                                             #
-        # Implement the function as described in the docstring.             #
-        # Use sigmoid activations for f and g.                              #
-        #####################################################################
+
         input1 = self.g(inputs)
         sig_input1 = torch.sigmoid(input1)
         input2 = self.h(sig_input1)
         out = torch.sigmoid(input2)
-        #####################################################################
-        #                       END OF YOUR CODE                            #
-        #####################################################################
+
         return out
 
 
@@ -134,9 +128,6 @@ def train(model, lr, lamb, train_data, zero_train_data, valid_data, num_epoch):
         train_loss_lst.append(train_loss)
 
     return val_acc_lst, train_loss_lst
-    #####################################################################
-    #                       END OF YOUR CODE                            #
-    #####################################################################
 
 
 def evaluate(model, train_data, valid_data):
@@ -168,11 +159,6 @@ def evaluate(model, train_data, valid_data):
 def main():
     zero_train_matrix, train_matrix, valid_data, test_data = load_data()
 
-    #####################################################################
-    # TODO:                                                             #
-    # Try out 5 different k and select the best k using the             #
-    # validation set.                                                   #
-    #####################################################################
     num_question = train_matrix.shape[1]
     # Set model hyperparameters.
     k_list = [10, 50, 100, 200, 500]
@@ -235,11 +221,6 @@ def main():
     test_acc1 = evaluate(model_lst[np.argmax(acc)], zero_train_matrix, test_data)
     print("test accuracy is {}".format(test_acc1))
 
-
-
-    #####################################################################
-    #                       END OF YOUR CODE                            #
-    #####################################################################
 
 
 if __name__ == "__main__":

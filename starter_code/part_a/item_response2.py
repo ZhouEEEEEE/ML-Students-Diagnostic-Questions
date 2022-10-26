@@ -22,9 +22,7 @@ def neg_log_likelihood(data, theta, beta, alpha, c):
     :param beta: Vector
     :return: float
     """
-    #####################################################################
-    #                       END OF YOUR CODE                            #
-    #####################################################################
+
     # log_lklihood = 0.
     # for i in range(len(data["user_id"])):
     #     theta_i = theta[data["user_id"][i]]
@@ -72,9 +70,7 @@ def neg_log_likelihood(data, theta, beta, alpha, c):
     #   c = data["is_correct"][i]
     #
     #   log_lklihood += np.log(1-c) - np.log(1 + np.exp(alpha[q] * (theta[u]-beta[q]))) - c*np.log(1-c) + c*np.log(c + np.exp(alpha[q] * (theta[u]-beta[q])))
-    # #####################################################################
-    # #                       END OF YOUR CODE                            #
-    # #####################################################################
+
     # return -log_lklihood
 
 
@@ -245,11 +241,7 @@ def main():
     val_data = load_valid_csv("../data")
     test_data = load_public_test_csv("../data")
 
-    #####################################################################
-    # TODO:                                                             #
-    # Tune learning rate and number of iterations. With the implemented #
-    # code, report the validation and test accuracy.                    #
-    #####################################################################
+
     # iterations = [20, 50, 100, 200]
     iterations = [30]
     # lr = [0.1, 0.05, 0.01]
@@ -310,10 +302,7 @@ def main():
     # plt.legend()
     # plt.show()
 
-    #####################################################################
-    #####################################################################
-    #                       END OF YOUR CODE                            #
-    #####################################################################
+
 
 
 if __name__ == "__main__":
